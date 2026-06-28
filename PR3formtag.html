@@ -1,0 +1,268 @@
+<html lang="en">
+<head>
+    <title>PERSONAL INFORMATION FORM</title>
+    <script>
+        
+
+        function validateForm()
+        {
+            
+    
+            var fullname=document.getElementById("f_name").value;
+
+            if(fullname=="")
+        {
+            /*alert("Please enter full name");*/
+            document.getElementById("fname").style.display="block";
+            document.getElementById("f_name").focus();
+            return false;
+        
+        }
+        else{
+            document.getElementById("fname").style.display="none";
+        }
+            var email=document.getElementById("e_mail").value;
+        
+         
+          
+            if(email=="")
+        {
+            /* alert("Please enter email");*/
+             document.getElementById("ename").style.display="block";
+
+            document.getElementById("e_mail").focus();
+            return false;
+        }
+         else{
+            document.getElementById("ename").style.display="none";
+        }
+
+        var atpos=email.indexOf("@");
+          var dotpos=email.indexOf(".");
+         
+
+          
+          if(atpos<1 || atpos>dotpos-atpos || dotpos<atpos+1 || dotpos>mail.length-2)
+
+          {document.getElementById("evname").style.display="block";
+
+            document.getElementById("e_mail").focus();
+            return false;
+    }
+         else{
+            document.getElementById("evname").style.display="none";
+        }
+
+          
+        
+            var PASSWORD=document.getElementById("passid").value;
+
+            if(PASSWORD=="")
+        {
+           /* alert("Please enter PASSWORD");*/
+            document.getElementById("pname").style.display="block";
+            document.getElementById("passid").focus();
+            return false;
+        }
+         else{
+            document.getElementById("pname").style.display="none";
+        }
+       
+        var BirthDate=document.getElementById("DOB").value;
+
+            if(BirthDate=="")
+        {
+            /*alert("Please enter birth date");*/
+             document.getElementById("dname").style.display="block";
+            document.getElementById("DOB").focus();
+            return false;
+        }
+         else{
+            document.getElementById("dname").style.display="none";
+        }
+       
+        var Mobileno=document.getElementById("MOb").value;
+
+            if(Mobileno=="")
+        {
+            /*alert("Please enter mobile number")*/
+             document.getElementById("mname").style.display="block";
+            document.getElementById("MOb").focus();
+            return false;
+        }
+         else{
+            document.getElementById("mname").style.display="none";
+        }
+         if(Mobileno.length!=10)
+        {
+            /*alert("Please enter mobile number")*/
+             document.getElementById("mvname").style.display="block";
+            document.getElementById("MOb").focus();
+            return false;
+        }
+         else{
+            document.getElementById("mvname").style.display="none";
+        }
+        if(Mobileno[0]<6 || Mobileno[0]>9)
+        {
+            document.getElementById("mvdname").style.display="block";
+            document.getElementById("MOb").focus();
+            return false;
+
+        } 
+        else
+        {
+            document.getElementById("mvdname").style.display="none";
+        }
+        
+        
+        
+        var ADDRESS=document.getElementById("add").value;
+
+            if(ADDRESS=="")
+        {
+            /*alert("Please enter address");*/
+             document.getElementById("aname").style.display="block";
+            document.getElementById("add").focus();
+            return false;
+        }
+         else{
+            document.getElementById("aname").style.display="none";
+        }
+       
+        var GENDER=document.getElementsByName("GENDER");
+
+        var gen1=GENDER[0].checked;
+        var gen2=GENDER[1].checked;
+
+        if(gen1==false && gen2==false)
+        {
+           /* alert("Please select gender");*/
+            document.getElementById("gname").style.display="block";
+            return false;
+        }
+         else{
+            document.getElementById("gname").style.display="none";
+        }
+       
+
+        var Qualification=document.getElementsByName("Qualification");
+
+        var q1=Qualification[0].checked;
+        var q2=Qualification[1].checked;
+
+        if(q1==false && q2==false)
+        {
+           /* alert("Please select qualification");*/
+            document.getElementById("qname").style.display="block";
+            return false;
+        }
+         else{
+            document.getElementById("qname").style.display="none";
+        }
+       
+
+        var bloodgroup=document.getElementById("bgroup").value;
+
+            if(bloodgroup=="")
+        {
+            /*alert("Please enter blood group");*/
+             document.getElementById("blname").style.display="block";
+            document.getElementById("bgroup").focus();
+            return false;
+        }
+         else{
+            document.getElementById("blname").style.display="none";
+        }
+       
+         var uploadF=document.getElementById("UploadF").value;
+
+            if(uploadF=="")
+        {
+            /* alert("Please enter files");*/
+             document.getElementById("uname").style.display="block";
+            document.getElementById("UploadF").focus();
+            return false;
+        }
+         else{
+            document.getElementById("uname").style.display="none";
+        }
+    }
+       
+
+        
+    </script>
+</head>
+<body>
+    <form name="Form1" action="#" method="post" id="formdata" enctype="multipart/form-data" align="left" onsubmit=" return validateForm()">
+    <label>Full Name: </label>
+    <input type="text" name="fullname" id="f_name" value="" placeholder="Please Enter Your Name"><br>
+    <span id="fname" style="color:brown;display:none;">Please Enter Your Full Name</span>
+
+    <label>Email: </label>
+    <input type="text"  name="email" id="e_mail" value="" placeholder="Please Enter Your Email"><br>
+    <span id="ename" style="color:brown;display:none;">Please Enter Your Email</span>
+     <span id="evname" style="color:brown;display:none;">Please Enter Your Valid Email</span>
+ 
+    
+
+    <label>Password: </label>
+    <input type="password" name="PASSWORD" id="passid" value="" placeholder="Please Enter Your Password"><br>
+    <span id="pname" style="color:brown;display:none;">Please Enter Your Password</span>
+
+
+    <label>Date Of Birth: </label>
+    <input type="date" name="BirthDate" id="DOB" value=""><br>
+    <span id="dname" style="color:brown;display:none;">Please Enter Your Birthdate</span>
+
+
+    <label>Mobile: </label>
+    <input type="text" name="Mobileno" id="MOb" value=""><br>
+    <span id="mname" style="color:brown;display:none;">Please Enter Your Mobile Number</span>
+    <span id="mvname" style="color:brown;display:none;">Please Enter Your Valid Mobile Number</span>
+    <span id="mvdname" style="color:brown;display:none;">Please Starts Your Number From 6 to 9</span>
+
+
+
+    <label>Address: </label>
+    <textarea name="ADDRESS" cols="20" id="add"></textarea><br>
+    <span id="aname" style="color:brown;display:none;">Please Enter Your Address</span>
+
+
+    <label>Gender: </label>
+    <input type="radio"  name="GENDER" value="M">MALE
+    <input type="radio"  name="GENDER" value="F">FEMALE<br>
+    <span id="gname" style="color:brown;display:none;">Please Enter Gender</span>
+
+
+    <label>Qualification: </label>
+    <input type="checkbox" name="Qualification" value="G">Graduate
+    <input type="checkbox" name="Qualification" value="PG">Post Graduate<br>
+    <span id="qname" style="color:brown;display:none;">Please Enter Qualification</span>
+
+
+    <label>Blood Group: </label>
+    <select name="bloodgroup" id="bgroup" size="3">
+    <option value="select">select</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="AB">AB</option>
+    <option value="AB-">AB-</option>
+    <option value="AB+">AB+</option>
+    <option value="O+">O+</option>
+    <option value="O-">O-</option>
+    </select><br>
+    <span id="blname" style="color:brown;display:none;">Please Enter Blood Group</span>
+
+    
+    <label>upload file: </label>
+    <input type="file" name="uploadF" id="UploadF"><br>
+    <span id="uname" style="color:brown;display:none;">Please Upload File</span>
+
+
+    <input type="reset" name="Reset" value="RESET">
+    <input type="submit" name="Submit" value="SUBMIT">
+
+</form>
+</body>
+</html>
