@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .box
+            {
+                width:200px;
+                height:200px;
+                background-color: grey;
+            }
+
+            .static
+            {
+                position: static;/*Normal Position Of an element.It stays where it naturally appears cant be moved*/
+                background-color: green;
+            }
+
+            .relative
+            {
+                position: relative;/*elemets remain in normal flow but can be moved from its original position*/
+                top:15px;/*move box 15px downward*/
+                left:20px;/*move box 20px right*/
+                background-color: orange;
+            }  
+
+            .parent
+            {
+                height: 250px;
+                position:relative;
+                border:2px solid blue;
+            }
+
+            .absolute
+            {
+                position: absolute;/*moves relative to its parent element*/
+                margin:40px;
+                right:20px;/*keeps the element 20px away from the right side of the parent*/
+                background-color: olive;
+            }
+
+            .fixed
+            {
+                position: fixed;/*stays fixed on the screen even when u scroll*/
+                bottom:30px;
+                left:20px;
+                background-color: yellow;
+            }
+
+            .sticky
+            {
+                position: sticky;/*moves normally, then sticks to a position when scrolling*/
+                top:0;
+                background-color: blueviolet;
+            }
+        </style>
+
+    </head>
+    <body>
+
+        <div class="box static">Test1</div>
+        <div class="box relative">Test1</div>
+        <div class="parent">
+            <div class="box absolute">Test3</div>
+        </div>
+        <div class="box fixed">Test4</div>
+        <div class="box sticky">Test5</div>
+
+      
+    </body>
+</html>

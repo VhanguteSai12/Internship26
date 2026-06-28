@@ -1,0 +1,150 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS TAGS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device=width" initial-scale="1.0">
+        <style>
+            #two
+            {
+                max-width: 800px; ///sets maximum width of the element can have
+                height:100px;
+                border: 2px solid red;
+                border-top-right-radius: 50px;///makes the corner rounds
+                background-color: lightblue;
+                opacity: 0.5;///transparency of the element
+
+            }
+            #one
+            {
+                width:800px;
+                height:100px;
+                border: 2px dotted green;
+                border-radius:15px;
+                display:none;///hides element completely
+                display:block;///to show the element again
+                visibility:hidden;///hides the element but it will take space in the page
+                visibility:visible;///to show the element again
+            }
+            #menu a:hover
+            {
+                text-decoration: none;//removes underline from the link
+                text-transform: uppercase;
+                font-size: 20px;
+                font-weight:bold;
+                color: green;
+            }
+            #menu1 ul li{
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 20px;
+                font-weight:bold;
+                color: green;
+                display: inline-block;//displays the list items in a horizontal line instead of vertical
+            }
+
+            #container .box
+            {
+                width: 150px;
+                height: 150px;
+                background-color: lightblue;
+            }
+            #container
+            {
+                display: flex;//to arrange the child elements in a row or column
+                flex-wrap:wrap;//allows the child elements to wrap to the next line if they exceed the container width
+                gap: 10px;
+            }
+            #container1 .box
+            {
+
+                width: 150px;
+                height: 150px;
+                background-color: lightblue;
+            }
+            #container1
+            {
+                display: grid;//to arrange the child elements in a grid format
+                gap: 10px;
+                grid-template-columns: repeat(3,1fr);///to define the number of columns in the grid and their width. In this case, it creates 3 columns of equal width (1fr each).
+                
+            }
+            #main
+            {
+                width: 900px;
+                height: 800px;
+                
+                border: 2px solid red;
+                background-color: yellow;
+                
+            }
+            .child1
+            {
+                width:400px;
+                height:300px;
+                border: 2px solid yellow;
+                background-color:orange; 
+                float:left;
+            }
+            .child2
+            {
+                width:400px;
+                height:300px;
+                border: 2px solid yellow;
+                background-color:red;
+                float:right; 
+            
+
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div id="one">test1</div>
+        <div id="two">test2</div>
+
+        <div id="menu">
+
+         <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+         </ul>
+         </div>
+
+         <div id="menu1">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+             </ul>
+           </div>  
+        
+        <div id="container">
+            <div class="box">Test1</div>
+            <div class="box">Test2</div>
+            <div class="box">Test3</div>
+            <div class="box">Test4</div>
+            <div class="box">Test5</div>
+            <div class="box">Test6</div>
+        </div>
+
+        <br>
+        <div id="container1">
+            <div class="box">Test1</div>
+            <div class="box">Test2</div>
+            <div class="box">Test3</div>
+            <div class="box">Test4</div>
+            <div class="box">Test5</div>
+            <div class="box">Test6</div>
+        </div>
+
+
+        <div id="main">
+            <div class="child1">Test1</div>
+            <div class="child2">Test2</div>
+
+    </body>
+</html>

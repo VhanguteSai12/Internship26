@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <title>MARGIN AND PADDING</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial scale=1.0">
+    <style>
+        #one
+        {
+             width: 200px;
+             height: 100px;
+             border: 2px solid blue;
+             margin-right: 50px; ///add space only on the right side
+             margin-left: 50px; ///add space only on the left side
+             float:left;  
+        }
+        
+        
+         #one1
+        {
+             width: 200px;
+             height: 100px;
+             border: 2px solid blue;
+             margin-right: 50px; ///add space only on the right side
+             margin-left: 50px; ///add space only on the left side 
+             float:left; 
+        }
+        *///all elements get that style
+        {
+            margin:0;
+            padding:0;
+            box-sizing:border-box;//makes the specified width and height include the content,padding and border
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="one">Margin</div>
+    <div id="one1">Margin1</div>
+    
+    </body>
+    </html>      
