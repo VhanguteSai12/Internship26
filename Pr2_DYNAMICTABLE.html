@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            .dis
+            {
+                display:none;
+            }
+            </style>
+      </head>
+      <body>
+        <div id="menu"></div>
+      </body>
+    </html>
+    <script>
+    let s=1;
+    var cls="";
+    
+
+    var student=[{id:1,name:"sai",salary:100000},
+                 {id:2,name:"sayali",salary:200000},
+                 {id:3,name:"siddhi",salary:300000},
+                 {id:4,name:"apurva",salary:400000}];
+    
+    var str="";
+    
+    str+="<table border='1'>";
+    str+="<tr>";
+    str+="<th>id</th>";
+    str+="<th>name</th>";
+    str+="<th>salary</th>";
+    str+="</tr>";
+
+    for(i=0;i<student.length;i++)
+    {
+      if(s==2)
+      {
+        cls="";
+
+      }
+  
+      s++;
+     
+      str+="<tr class="'+cls+'"</tr>";
+      str+="<td>"+student[i].id+"</td>";
+      str+="<td>"+student[i].name+"</td>";
+      str+="<td>"+student[i].salary+"</td>";
+    }
+    str+="</table>";
+    document.getElementById("menu").innerHTML=str;
+    </script>

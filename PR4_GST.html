@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src=jquery-4.0.0.js></script>
+    </head>
+  <body>
+    <label>Original Price </label>
+    <input type="text"  name="PRICE" id="orp" value="" placeholder="Please Enter First Number"><br>
+
+    <label>GST </label>
+    <input type="text"  name="GP" id="gst1" value="" placeholder="Please Enter Operator"><br>
+
+    
+
+    <button onclick="funcalculate()">CALCULATE</button><br>
+
+
+    <label>Result </label>
+    <span id="result"></span><br>
+   
+  </body>
+</html>
+<script>
+
+
+ function funcalculate()
+ {
+    debugger;
+  var cal="";
+  let orp=$("#orp").val();
+  let gst1=$("#gst1").val();
+
+  $("#gst1").css("color","green");//color by css
+  
+  cal=parseInt(orp)*parseInt(gst1)/100;
+  $("#result").html(cal);
+  $("#result").css("color","red");
+
+ }
+ </script>
+    
